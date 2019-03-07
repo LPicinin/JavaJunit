@@ -6,17 +6,20 @@
 package Classes;
 
 import junitparams.FileParameters;
+import junitparams.JUnitParamsRunner;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 /**
  *
  * @author luis
  */
+@RunWith(JUnitParamsRunner.class)
 public class TrianguloTest
 {
 
@@ -49,6 +52,9 @@ public class TrianguloTest
     public void VerificarTipo(int l1, int l2, int l3, String resultado)
     {
         Triangulo t = new Triangulo();
-        Assert.assertEquals(resultado, t.VerificarTipo(l1, l2, l3));
+        if(l1 == 0 || l2 == 0 || l3 ==0)
+            Assert.fail("Algum paramentro veio como 0");
+        else
+            Assert.assertEquals(resultado, t.VerificarTipo(l1, l2, l3));
     }
 }
