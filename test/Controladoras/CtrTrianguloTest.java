@@ -46,35 +46,9 @@ public class CtrTrianguloTest
     public void tearDown()
     {
     }
-
-    /**
-     * Test of instancia method, of class CtrTriangulo.
-     */
-//    @Test
-//    public void testInstancia()
-//    {
-//        /*System.out.println("instancia");
-//        CtrTriangulo expResult = null;
-//        CtrTriangulo result = CtrTriangulo.instancia();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//        */
-//    }
-
-    /**
-     * Test of valida method, of class CtrTriangulo.
-     */
     
-    /*@Test
-    @FileParameters("src\\Arquivo\\triangulo.csv")
-    public void testValida(int l1, int l2, int l3, String resultado)
-    {
-        CtrTriangulo c = new CtrTriangulo(l1, l2, l3);
-        Assert.assertEquals(resultado, c.valida());
-    }*/
     @Test
-    @FileParameters("triangulo.csv")
+    @FileParameters("src\\Arquivo\\triangulo.csv")
     public void testValida(int l1, int l2, int l3, String resultado)
     {
         CtrTriangulo c = new CtrTriangulo(l1, l2, l3);
