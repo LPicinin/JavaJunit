@@ -52,9 +52,6 @@ public class TrianguloTest
     public void VerificarTipo(int l1, int l2, int l3, String resultado)
     {
         Triangulo t = new Triangulo(l1, l2, l3);
-        if(l1 == 0 || l2 == 0 || l3 ==0)
-            Assert.fail("Algum paramentro veio como 0");
-        else
-            Assert.assertEquals(resultado, t.VerificarTipo());
+        Assert.assertEquals(resultado, t.VerificarTipo());
     }
 }

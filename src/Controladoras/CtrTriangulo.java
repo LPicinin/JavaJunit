@@ -18,33 +18,14 @@ public class CtrTriangulo
     private Integer l2;
     private Integer l3;
     
-    private static CtrTriangulo ctrTriangulo;
-
-    private CtrTriangulo(Integer l1, Integer l2, Integer l3)
+    public CtrTriangulo(Integer l1, Integer l2, Integer l3)
     {
         this.l1 = l1;
         this.l2 = l2;
         this.l3 = l3;
     }
 
-    public static CtrTriangulo instancia(Integer l1, Integer l2, Integer l3)
-    {
-        if (ctrTriangulo == null)
-        {
-            ctrTriangulo = new CtrTriangulo(l1, l2, l3);
-        }
-        return ctrTriangulo;
-    }
-    public static CtrTriangulo instancia()
-    {
-        if (ctrTriangulo == null)
-        {
-            ctrTriangulo = new CtrTriangulo(0,0,0);
-        }
-        return ctrTriangulo;
-    }
-
-    public String valida(int l1, int l2, int l3)
+    public String valida()
     {
         Triangulo t = new Triangulo(l1, l2, l3);
         if (t.validaDados())
@@ -54,6 +35,6 @@ public class CtrTriangulo
                 return t.VerificarTipo();
             }
         }
-        return "k";
+        return "false";
     }
 }

@@ -6,18 +6,20 @@
 package Controladoras;
 
 import junitparams.FileParameters;
+import junitparams.JUnitParamsRunner;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
 
 /**
  *
  * @author Aluno
  */
+@RunWith(JUnitParamsRunner.class)
 public class CtrTrianguloTest
 {
     
@@ -48,29 +50,34 @@ public class CtrTrianguloTest
     /**
      * Test of instancia method, of class CtrTriangulo.
      */
-    @Test
-    public void testInstancia()
-    {
-        System.out.println("instancia");
-        CtrTriangulo expResult = null;
-        CtrTriangulo result = CtrTriangulo.instancia();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+//    @Test
+//    public void testInstancia()
+//    {
+//        /*System.out.println("instancia");
+//        CtrTriangulo expResult = null;
+//        CtrTriangulo result = CtrTriangulo.instancia();
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//        */
+//    }
 
     /**
      * Test of valida method, of class CtrTriangulo.
-     * @param l1
-     * @param l2
-     * @param l3
-     * @param resultado
      */
-    @Test
+    
+    /*@Test
     @FileParameters("src\\Arquivo\\triangulo.csv")
     public void testValida(int l1, int l2, int l3, String resultado)
     {
-        Assert.assertEquals("Equilatero", CtrTriangulo.instancia().valida(l1, l2, l3));
+        CtrTriangulo c = new CtrTriangulo(l1, l2, l3);
+        Assert.assertEquals(resultado, c.valida());
+    }*/
+    @Test
+    @FileParameters("triangulo.csv")
+    public void testValida(int l1, int l2, int l3, String resultado)
+    {
+        CtrTriangulo c = new CtrTriangulo(l1, l2, l3);
+        Assert.assertEquals(resultado, c.valida());
     }
-    
 }
