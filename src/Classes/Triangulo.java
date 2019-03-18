@@ -47,7 +47,7 @@ public class Triangulo
 
     public boolean validaDados()
     {
-        return !(l1 ==0 && l2 == 0 && l3 == 0);
+        return (l1 > 0 && l2 > 0 && l3 > 0);
     }
 
     public boolean validaSoma()
