@@ -34,6 +34,8 @@ public class CtrTriangulo
             {
                 return t.VerificarTipo();
             }
+            else
+                return "Soma Invalida";
         }
         return "false";
     }

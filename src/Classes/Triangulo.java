@@ -5,6 +5,8 @@
  */
 package Classes;
 
+import java.util.Objects;
+
 /**
  *
  * @author luis
@@ -30,17 +32,17 @@ public class Triangulo
     // verificar a soma
     public String VerificarTipo()
     {
-        if ((l1 == l2) && (l2 == l3) && (l1 == l3))
+        if ((Objects.equals(l1, l2)) && (Objects.equals(l2, l3)))
         {
             return ("Equilatero");
         } else
         {
-            if ((l1 != l2) && (l2 != l3) && (l1 != l3))
+            if ((!Objects.equals(l1, l2)) && (!Objects.equals(l2, l3)) && (!Objects.equals(l1, l3)))
             {
                 return ("Escaleno");
             } else
             {
-                return ("Isósceles");
+                return ("Isosceles");
             }
         }
     }
