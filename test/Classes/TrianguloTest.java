@@ -47,11 +47,28 @@ public class TrianguloTest
     {
     }
 
-    @Test
+    /*@Test
     @FileParameters("src\\Arquivo\\triangulo.csv")
     public void VerificarTipo(int l1, int l2, int l3, String resultado)
     {
         Triangulo t = new Triangulo(l1, l2, l3);
         Assert.assertEquals(resultado, t.VerificarTipo());
+    }*/
+    
+    @Test
+    @FileParameters("src\\Arquivo\\Vdados.csv")
+    public void VerificarDados(int l1, int l2, int l3, Boolean resultado)
+    {
+        Triangulo t = new Triangulo(l1, l2, l3);
+        Assert.assertEquals(resultado, t.validaDados());
     }
+    
+    @Test
+    @FileParameters("src\\Arquivo\\Vsoma.csv")
+    public void VerificarSoma(int l1, int l2, int l3, boolean resultado)
+    {
+        Triangulo t = new Triangulo(l1, l2, l3);
+        Assert.assertEquals(resultado, t.validaDados());
+    }
+    
 }
