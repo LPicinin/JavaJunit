@@ -48,7 +48,7 @@ public class CtrTrianguloTest
     }
     
     @Test
-    @FileParameters("src\\Arquivo\\triangulo.csv")
+    @FileParameters("src\\Arquivo\\Vtriangulo.csv")
     public void testValida(int l1, int l2, int l3, String resultado)
     {
         CtrTriangulo c = new CtrTriangulo(l1, l2, l3);

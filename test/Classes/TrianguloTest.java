@@ -68,7 +68,7 @@ public class TrianguloTest
     public void VerificarSoma(int l1, int l2, int l3, boolean resultado)
     {
         Triangulo t = new Triangulo(l1, l2, l3);
-        Assert.assertEquals(resultado, t.validaDados());
+        Assert.assertEquals(resultado, t.validaSoma());
     }
     
 }
